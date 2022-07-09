@@ -1,17 +1,21 @@
+import styles from "./slideTravel.module.scss";
+
 type Props = {
   title: string;
   text: string;
+  bg_color: string;
 };
-const SlideTravel = ({ title, text }: Props) => {
+const SlideTravel = ({ title, text, bg_color }: Props) => {
+  const divStyle = { backgroundColor: bg_color };
   return (
-    <div>
-      <div>
+    <div className={styles.slideWrapper} style={divStyle}>
+      <div className={styles.left}>
         <h3>{title}</h3>
         <p>{text}</p>
       </div>
-      <div>
-        <div></div>
-        <div></div>
+      <div className={styles.rigth}>
+        <div className={styles.box_one}></div>
+        <div className={styles.box_two}></div>
       </div>
     </div>
   );
