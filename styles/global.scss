@@ -1,0 +1,27 @@
+// @font-face {
+//     font-family: 'Poppins';
+//     src: url('fonts/Poppins-Medium.ttf') format('ttf');
+//     // src: url('fonts/Poppins-Medium.ttf');
+//     font-weight: 400;
+//     font-style: normal;
+//   }
+
+  @font-face {
+    font-family: Poppins;
+    src: 
+      url(fonts/Poppins-Medium.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+//   @font-face {
+//     font-family: 'Proxima Nova';
+//     font-style: normal;
+//     font-weight: 400;
+//     src:  url('/static/fonts/ProximaNova/ProximaNova-Regular.ttf') format('ttf');
+//   }
+
+  body {
+    font-family: 'Poppins', sans-serif; 
+    margin:0;
+  }
