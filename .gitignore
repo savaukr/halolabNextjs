@@ -1,0 +1,13 @@
+node_modules/
+!backicon.ico
+!favicon.ico
+!.gitignore
+.DS_Store
+*.DS_Store
+*/.DS_Store
+.idea/
+.gtm/
+.next/
+.next
+.build/
+.env
