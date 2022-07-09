@@ -1,5 +1,35 @@
 @import "../../styles/_variables.module.scss";
 
+.footerWrapper {
+    background-color: $white-dark;
+    
+}
 .footer {
-  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 96px 80px 112px;
+    color: $black-light;
+    h2 {
+        font-size: 34px;
+        line-height: 48px;
+    }
+    h3 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    div p {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+    }
+}
+.socialIcon {
+    cursor: pointer;
+}
+.socialIcon:not(:last-child) {
+    margin-right: 15px;
 }

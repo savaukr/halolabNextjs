@@ -17,6 +17,9 @@
 .leftBlock {
     padding-left: 80px;
     width:47%;
+    @media (max-width: $screen-md) {
+        width:55%;
+    }
     @media (max-width: $screen-m) {
         width:100%;
         padding-left: 0;
@@ -35,6 +38,7 @@
 .inputWrapper {
     margin: 48px 0 128px;
     padding: 5px 15px;
+    min-width: 350px;
     width:100%;
     height: 64px;
     background: $white;
@@ -74,6 +78,11 @@
     .searchBtn:hover {
         background-color: $red-light-hover;
     }
+    @media (max-width: $screen-m) {
+       
+        margin-bottom: 36px;
+    }
+   
 }
 
 .rightBlock  {
@@ -99,7 +108,10 @@
 
     @media (max-width: $screen-m) {
         width:100%;
-
+        margin-bottom: 166px;
+    }
+    @media (max-width: $screen-md) {
+        width:45%;
     }
 
 }
