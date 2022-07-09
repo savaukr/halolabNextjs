@@ -1,0 +1,23 @@
+$slide_width: 100%;
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: $slide_width;
+}
+.fewSlides {
+  flex: 0 0 auto;
+  width: 100%;
+  @media (min-width: 1200px) {
+    width: 33%;
+  }
+}
+
+.active {
+  box-shadow: 0 4px 35px rgb(0 0 0 / 5%);
+}
