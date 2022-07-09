@@ -48,6 +48,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    > div {
+        width: 100%;
+    }
     .input {
         border: none;
         font-size: 14px;
@@ -55,7 +58,7 @@
         color: $grey;
         max-width: 380px;
         padding: 6px;
-
+        width: 80%;
     }
     .inputIcon {
         display: inline-block;

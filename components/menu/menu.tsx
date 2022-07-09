@@ -27,11 +27,19 @@ const Menu = () => {
       <div className={styles.wrapper}>
         <div className={styles.menuWrapper}>
           <div>
-            <img
-              src="/assets/Logo.png"
-              srcSet={"/assets/Logo.png 1x, /assets/Logo2x.png 2x"}
-              alt="nature needs logo"
-            />
+            <A
+              href="/"
+              classNameOne={styles.link}
+              classNameTwo={
+                isActive(LIST_MENU_ITEM.HOME, router) ? styles.active : ""
+              }
+            >
+              <img
+                src="/assets/Logo.png"
+                srcSet={"/assets/Logo.png 1x, /assets/Logo2x.png 2x"}
+                alt="nature needs logo"
+              />{" "}
+            </A>
           </div>
           <nav className={styles.navigate}>
             <ul className={styles.flex}>
