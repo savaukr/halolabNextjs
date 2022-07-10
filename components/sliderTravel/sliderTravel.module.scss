@@ -56,3 +56,23 @@
        padding-left: 20px;
     }
 }
+.embla__dots {
+    text-align: center;
+    display: none;
+    @media (max-width: $screen-m) {
+        display: block;
+     }
+}
+.embla__dot {
+    width:11px;
+    height: 13.4px;
+    border: 1px solid $black;
+    background-color: $white;
+    border-radius: 50%;
+}
+.is_selected {
+    background-color: $black;
+}
+.embla__dot:not(:last-child) {
+    margin-right: 14px;
+}

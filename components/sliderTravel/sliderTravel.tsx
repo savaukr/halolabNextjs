@@ -1,17 +1,34 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { EmblaCarouselType } from "embla-carousel-react";
 import EmblaCarousel from "../carousel/emblaCarousel";
 import SlideTravel from "../slideTravel/slideTravel";
 import { COLOR_BODY, COLOR_BLUE, COLOR_RED } from "../const/conts";
 
 import styles from "./sliderTravel.module.scss";
+import classNames from "../../node_modules/classnames/index";
 
 const SliderTravel = () => {
   const [scrollPrev, setScrollPrev] = useState<() => void>();
   const [emblaApi, setEmblaApi] = useState<EmblaCarouselType>();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState([]);
   const [slidersLength, setSlidersLength] = useState(0);
+  console.log("emblaApi:", emblaApi);
+  console.log(emblaApi?.scrollSnapList());
 
+  const DotButton = ({ selected, onClick }) => (
+    <button
+      className={classNames(styles.embla__dot, {
+        [styles.is_selected]: selected,
+      })}
+      type="button"
+      onClick={onClick}
+    />
+  );
+  const scrollTo = useCallback(
+    (index) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
   const handleClickPrev = () => {
     if (emblaApi) {
       emblaApi.scrollPrev();
@@ -38,6 +55,7 @@ const SliderTravel = () => {
     };
     emblaApi?.on("init", cb);
     emblaApi?.on("select", cb);
+    setScrollSnaps?.(emblaApi?.scrollSnapList());
     return () => {
       emblaApi?.off("init", cb);
       emblaApi?.off("select", cb);
@@ -71,7 +89,7 @@ const SliderTravel = () => {
             </div>
           </div>
         </div> */}
-        <div className={styles.arrowLeft}>
+        <div className={styles.arrowLeft} onClick={handleClickPrev}>
           <img src="./svg/ChevronLeft.svg" alt="arrow" />
         </div>
         <ul className={styles.slides}>
@@ -106,9 +124,18 @@ const SliderTravel = () => {
             </li>
           </EmblaCarousel>
         </ul>
-        <div className={styles.arrowRight}>
+        <div className={styles.arrowRight} onClick={handleClickNext}>
           <img src="./svg/ChevronLeft.svg" alt="arrow" />
         </div>
+      </div>
+      <div className={styles.embla__dots}>
+        {scrollSnaps?.map((_, index) => (
+          <DotButton
+            key={index}
+            selected={index === activeIndex}
+            onClick={() => scrollTo(index)}
+          />
+        ))}
       </div>
     </div>
   );
