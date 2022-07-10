@@ -12,7 +12,7 @@ const Footer = () => {
           <p>2019 Rootz Foundation.  All rights reserved</p>
         </div>
 
-        <div>
+        <div className={styles.headquarters}>
           <h3>Headquarters</h3>
           <p>1234 Taliban Los Angeles, La 1234567 (123) 456-7890</p>
         </div>
