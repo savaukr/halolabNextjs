@@ -12,6 +12,7 @@ import Menu from "../menu/menu";
 
 const Header = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
+  const [inputValue, setInputValue] = useState<string | null>(null);
 
   return (
     <div className={styles.headerWrapper}>
@@ -30,8 +31,10 @@ const Header = () => {
               <div>
                 <span className={styles.inputIcon}></span>
                 <input
+                  value={inputValue}
                   placeholder="Find the place to help"
                   className={styles.input}
+                  onChange={(event) => setInputValue(event.target.value)}
                 />
               </div>
 

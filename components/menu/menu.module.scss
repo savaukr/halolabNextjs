@@ -49,6 +49,9 @@
     text-align: center;
     color: $black;
     cursor: pointer;
+    &:hover {
+        background-color: $white-light;
+    }
     @media (max-width: $screen-m) {
         display: none;
 
@@ -79,6 +82,9 @@
         display: inline-block;
         width: 90%;
         max-width: 337px;
+        &:hover {
+            background-color: $white-light;
+        }
 
     }
     @media (max-width: $screen-m) {
@@ -90,6 +96,7 @@
 .menuBtn {
     border: none;
     display: none;
+    cursor: pointer;
     @media (max-width: $screen-m) {
         display: block;
 
