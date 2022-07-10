@@ -1,0 +1,94 @@
+@import "../../styles/_variables.module.scss";
+
+.wrapper {
+    margin: 72px 0 200px;
+    @media (max-width: $screen-md) {
+        margin: 42px 0 90px;
+    }
+}
+.stories {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+.flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.seeBtn {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    padding: 8px 0px;
+}
+.storiesText, .storiesPhoto, .storiesVideo {
+    width:30%;
+    position: relative;
+    padding-top: 20px;
+    @media (max-width: $screen-md) {
+        width:45%;
+    }
+    @media (max-width: $screen-m) {
+        width:100%;
+    }
+}
+.storiesVideo {
+    .leftBlock {
+       cursor: pointer;
+    }
+    .playing {
+        z-index: 5;
+        position: absolute;
+        transform: translate(-25%, -50%);
+       
+        padding: 20px;
+        background-color: $black;
+        border-radius: 20px;
+        @media (max-width: $screen-m) {
+            transform: translate(-5%, -50%);
+        }
+    }
+    
+}
+.storiesText, .storiesVideo {
+    padding-right: 20px;
+}
+
+.storiesText, .storiesPhoto {
+    .leftBlock {
+        cursor: pointer;
+        transition: transform .5s ease-in-out;
+    }
+}
+.storiesText, .storiesPhoto  {
+    .leftBlock:hover {
+        transform: scale(1.15);
+    }
+}
+.rightBlock {
+    padding-left: 30px;
+    .hash {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    h3 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+.seeMoreContent {
+    background-color: $white-dark;
+    position: absolute;
+    z-index: 5;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
