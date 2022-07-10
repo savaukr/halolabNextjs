@@ -1,5 +1,32 @@
+@import "../../styles/_variables.module.scss";
+
 .wrapper {
     padding: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrowLeft {
+    margin-right: 64px;
+    @media (max-width: $screen-md) {
+        margin-right: 34px;
+    }
+    @media (max-width: $screen-m) {
+        display: none;
+    }
+}
+.arrowRight, .arrowLeft {
+    cursor: pointer;
+}
+.arrowRight {
+    transform: rotate(180deg);
+    margin-left: 64px;
+    @media (max-width: $screen-md) {
+        margin-left: 34px;
+    }
+    @media (max-width: $screen-m) {
+        display: none;
+    }
 }
 .slides {
     position: relative;
@@ -24,4 +51,8 @@
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
     padding-left: 200px;
+    margin: 0 auto;
+    @media (max-width: $screen-s) {
+       padding-left: 20px;
+    }
 }

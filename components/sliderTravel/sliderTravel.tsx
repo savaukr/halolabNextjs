@@ -71,6 +71,9 @@ const SliderTravel = () => {
             </div>
           </div>
         </div> */}
+        <div className={styles.arrowLeft}>
+          <img src="./svg/ChevronLeft.svg" alt="arrow" />
+        </div>
         <ul className={styles.slides}>
           <EmblaCarousel
             setEmblaApi={setEmblaApi}
@@ -103,6 +106,9 @@ const SliderTravel = () => {
             </li>
           </EmblaCarousel>
         </ul>
+        <div className={styles.arrowRight}>
+          <img src="./svg/ChevronLeft.svg" alt="arrow" />
+        </div>
       </div>
     </div>
   );

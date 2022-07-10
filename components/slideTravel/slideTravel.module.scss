@@ -11,12 +11,16 @@
     @media (max-width: $screen-md) {
         flex-direction: column;
     }
+    @media (max-width: $screen-s) {
+        padding: 80px 14px 0 20px;
+    }
 }
 .left, .right {
     width: 47%;
     @media (max-width: $screen-md) {
         width: 100%;
     }
+    
 }
 .rigth {
     margin-left: 20px;
@@ -30,6 +34,9 @@
     height: 432px;
     @media (max-width: $screen-md) {
         height: 250px;
+    }
+    @media (max-width: $screen-s) {
+        width: 142px;
     }
 }
 .box_two {

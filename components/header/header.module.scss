@@ -36,7 +36,7 @@
     line-height: 32px;
 }
 .inputWrapper {
-    margin: 48px 0 128px;
+    margin: 48px auto 128px;
     padding: 5px 15px;
     min-width: 350px;
     width:100%;
@@ -48,8 +48,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $screen-s) {
+        min-width: 0px;
+        width: max-content;
+        justify-content: center;
+    }
     > div {
         width: 100%;
+        @media (max-width: $screen-s) {
+            // width: 80%;
+        }
     }
     .input {
         border: none;
@@ -59,6 +67,8 @@
         max-width: 380px;
         padding: 6px;
         width: 80%;
+       
+       
     }
     .inputIcon {
         display: inline-block;
@@ -76,6 +86,10 @@
         background-color: $red-light;
         border-radius: 30px;
         cursor: pointer;
+        @media (max-width: $screen-s) {
+            font-size: 12px;
+            width:100px;
+        }
         
     }
     .searchBtn:hover {
