@@ -72,7 +72,7 @@ const SliderTravel = () => {
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
             setSlidersLength={setSlidersLength}
-            isAoutoPlay={false}
+            isAoutoPlay={true}
             isFewSlides={false}
           >
             <li className={styles.slides}>

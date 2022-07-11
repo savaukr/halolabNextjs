@@ -58,7 +58,7 @@ const SliderSaveNature = () => {
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
               setSlidersLength={setSlidersLength}
-              isAoutoPlay={false}
+              isAoutoPlay={true}
               isFewSlides={true}
             >
               <li className={styles.slide}>
