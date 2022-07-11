@@ -88,7 +88,10 @@ const SliderSaveNature = () => {
               height={"15px"}
             />
           </div>
-          <div>{`${activeIndex + 1} / ${scrollSnaps.length}`}</div>
+          <div>
+            <span className={styles.count}>{`${activeIndex + 1}`}</span>
+            {` / ${scrollSnaps.length}`}
+          </div>
           <div className={styles.arrowRight} onClick={handleClickNext}>
             <img
               src="./svg/ChevronLeft.svg"
