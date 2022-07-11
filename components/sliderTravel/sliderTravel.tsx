@@ -13,8 +13,6 @@ const SliderTravel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
   const [slidersLength, setSlidersLength] = useState(0);
-  console.log("emblaApi:", emblaApi);
-  console.log(emblaApi?.scrollSnapList());
 
   const DotButton = ({ selected, onClick }) => (
     <button
@@ -65,30 +63,6 @@ const SliderTravel = () => {
   return (
     <div className="container">
       <div className={styles.wrapper}>
-        {/* <div className="flex justify-center items-center">
-          <div className="sm:w-1/3 md:w-1/2 justify-end hidden sm:flex">
-            <div
-              className="glide-arrow bg-primary rounded-full h-12 w-12 flex items-center justify-center shadow-md cursor-pointer transition-colors duration-300 hover:bg-opacity-75"
-              data-glide-dir="<"
-              onClick={handleClickPrev}
-            >
-              <img
-                src="/assets/images/icons/icon-arrow-white.svg"
-                alt="arrow icon"
-              />
-            </div>
-            <div
-              className="glide-arrow bg-primary rounded-full h-12 w-12 flex items-center justify-center shadow-md cursor-pointer transform rotate-180 transition-colors duration-300 hover:bg-opacity-75 ml-4"
-              data-glide-dir=">"
-              onClick={handleClickNext}
-            >
-              <img
-                src="/assets/images/icons/icon-arrow-white.svg"
-                alt="arrow icon"
-              />
-            </div>
-          </div>
-        </div> */}
         <div className={styles.arrowLeft} onClick={handleClickPrev}>
           <img src="./svg/ChevronLeft.svg" alt="arrow" />
         </div>
