@@ -1,0 +1,64 @@
+@import "../../styles/_variables.module.scss";
+
+.wrapper {
+    margin-top: 192px;
+    text-align: center;
+    @media (max-width: $screen-md) {
+        margin-top: 100px;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 28px;
+        color: $blue-dark;
+    }
+    p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 175%;
+        color: $balck-title;
+        opacity: 0.9;
+
+    }
+    
+}
+
+.photoes {
+    padding: 0 18px;
+    height: 376px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    @media (max-width: $screen-l) {
+        height: auto;
+        justify-content: center;
+        .photo_wrapper {
+            padding: 0 20px;
+        }
+    }   
+}
+
+.photo_wrapper {
+    z-index: 5;   
+}
+.photo_wrapper.photo_one {
+    @media (max-width: $screen-md) {
+        padding: 0 50px;
+    }
+}
+.photo_wrapper.photo_two {
+    align-self: flex-end;
+    @media (max-width: $screen-md) {
+        padding: 0 0 0 100px;
+    }
+}
+.photo_wrapper.photo_three {
+    @media (max-width: $screen-md) {
+        padding: 0 50px;
+    }
+}
+
+.line {
+    position: absolute;
+}
