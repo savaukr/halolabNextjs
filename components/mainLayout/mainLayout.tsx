@@ -22,7 +22,7 @@ const MainLayout = ({ children, keywords }: Props) => {
         <title>Nature needs you</title>
       </Head>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );

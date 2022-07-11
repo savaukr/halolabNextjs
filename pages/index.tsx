@@ -3,6 +3,7 @@ import React from "react";
 import MainLayout from "../components/mainLayout/mainLayout";
 import GetStarted from "../components/getStarted/getStarted";
 import OurTopTeam from "../components/ourTopTeam/ourTopTeam";
+import Ready from "../components/ready/ready";
 import SliderTravel from "../components/sliderTravel/sliderTravel";
 import Scale from "../components/scale/scale";
 import Stories from "../components/stories/stories";
@@ -15,6 +16,7 @@ const Index = () => {
       <OurTopTeam />
       <Scale />
       <GetStarted />
+      <Ready />
     </MainLayout>
   );
 };

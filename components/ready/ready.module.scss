@@ -1,0 +1,70 @@
+@import "../../styles/_variables.module.scss";
+.wrapper {
+    
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: inherit;
+    padding: 192px 0;
+    @media (max-width: $screen-m) {
+      flex-direction: column;
+      padding: 100px 0;
+    }
+}
+
+.left {
+    width: 50%;
+    padding-right: 80px;
+    p {
+        margin-bottom: 56px;
+    }
+    @media (max-width: $screen-m) {
+        width: 95%;
+        padding: 48px 18px 0 ;
+    }
+}
+.rigth {
+    width: 50%;
+    padding-left: 80px;
+    @media (max-width: $screen-m) {
+        width: 95%;
+        padding: 48px 18px;
+    }
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    padding: 15px 37px;
+    background-color: $red-light;
+    color:$white;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 140%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $red-light-hover;
+    }
+}
+.closeOpen {
+    margin-left: 15px;
+    cursor: pointer;
+    circle {
+        fill: $red-light
+    }
+    &:hover {
+        circle {
+            fill: $red-light-hover
+        }
+    }
+}
