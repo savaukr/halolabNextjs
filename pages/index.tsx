@@ -1,6 +1,7 @@
 import React from "react";
 
 import MainLayout from "../components/mainLayout/mainLayout";
+import GetStarted from "../components/getStarted/getStarted";
 import OurTopTeam from "../components/ourTopTeam/ourTopTeam";
 import SliderTravel from "../components/sliderTravel/sliderTravel";
 import Scale from "../components/scale/scale";
@@ -13,6 +14,7 @@ const Index = () => {
       <SliderTravel />
       <OurTopTeam />
       <Scale />
+      <GetStarted />
     </MainLayout>
   );
 };

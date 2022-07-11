@@ -1,0 +1,107 @@
+@import "../../styles/_variables.module.scss";
+
+.wrapper {
+    margin-top: 100px;
+}
+
+.content {
+    padding: 104px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-body;
+    border-radius: 20px;
+    @media (max-width: $screen-md) {
+        flex-direction: column;
+    }
+}
+.left {
+    width: 45%;
+    padding: 0 82px;
+    @media (max-width: $screen-md) {
+        width:90%;
+        padding: 0;
+    }
+}
+
+.right {
+    width:55%;
+    padding: 0 104px 0 45px;
+    position: relative;
+
+    h2 {
+        margin-bottom: 8px;
+     }
+
+     
+     @media (max-width: $screen-md) {
+        padding: 0;
+        margin-top: 55px;
+        width:90%;
+    }
+
+   
+}
+.login_form {
+     background-color: $white-dark;
+     border-radius: 16px;
+     padding: 40px 55px;
+     text-align: center;
+     @media (max-width: $screen-m) {
+        padding: 40px 18px;
+    }
+     
+}
+
+.inputWrapper {
+    text-align: center;
+    input {
+        width: 90%;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        background-color: $white;
+        padding: 12px 24px;
+        margin-top: 16px;
+        color: $grey;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+
+        @media (max-width: $screen-m) {
+            width: 80%;
+        }
+    }
+}
+.btnWrapper {
+    text-align: center;
+
+    button {
+        width: 92%;
+        border: none;
+        outline: none;
+        background-color: $red-light;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 15px 24px;
+        color: $white;
+        border-radius: 30px;
+        margin-top: 47px;
+        cursor: pointer;
+        &:hover {
+            background-color: $red-light-hover;
+        }
+    }
+}
+
+.petals {
+    position: relative;
+    text-align: end;
+
+}
+.petal_big {
+    transform: translateX(60px) translateY(40px);
+}
+.petal_small {
+    transform: translateX(20px) translateY(90px);
+}
