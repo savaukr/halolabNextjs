@@ -17,18 +17,18 @@ const OurTopTeam = () => {
         <div className={styles.photoes}>
           <div className={classNames(styles.photo_wrapper, styles.photo_one)}>
             <Image src={Team_photo_one} />
-            {/* <img src="./assets/team_photo_one.png" alt="Cris" /> */}
           </div>
-          <div className={styles.line}>
+          <div className={styles.line_first}>
             <img src="./assets/our_team_line_one.png" />
           </div>
           <div className={classNames(styles.photo_wrapper, styles.photo_two)}>
             <Image src={Team_photo_two} />
-            {/* <img src="./assets/team_photo_two.png" alt="Cris" /> */}
           </div>
           <div className={classNames(styles.photo_wrapper, styles.photo_three)}>
             <Image src={Team_photo_three} />
-            {/* <img src="./assets/team_photo_three.png" alt="Cris" /> */}
+          </div>
+          <div className={styles.line_second}>
+            <img src="./assets/our_team_line_two.png" />
           </div>
         </div>
       </div>
