@@ -1,3 +1,4 @@
+import classNames from "../../node_modules/classnames/index";
 import { useState } from "react";
 
 import A from "../link/a";
@@ -51,13 +52,16 @@ const Ready = () => {
                   {isOpen.first ? <BtnClose /> : <BtnOpen />}
                 </div>
               </div>
-              {isOpen.first ? (
-                <p>
-                  Not to make an open fire in nature and to clean up litter; not
-                  to pollute open water bodies; to switch to alternative energy
-                  sources; to reduce the use of non-renewable resources
-                </p>
-              ) : null}
+
+              <p
+                className={classNames(styles.text, {
+                  [styles.visible]: isOpen.first,
+                })}
+              >
+                Not to make an open fire in nature and to clean up litter; not
+                to pollute open water bodies; to switch to alternative energy
+                sources; to reduce the use of non-renewable resources
+              </p>
             </div>
             <div className={styles.question}>
               <div className={styles.titleWrapper}>
@@ -74,16 +78,18 @@ const Ready = () => {
                     })
                   }
                 >
-                  {isOpen.first ? <BtnClose /> : <BtnOpen />}
+                  {isOpen.second ? <BtnClose /> : <BtnOpen />}
                 </div>
               </div>
-              {isOpen.second ? (
-                <p>
-                  Not to make an open fire in nature and to clean up litter; not
-                  to pollute open water bodies; to switch to alternative energy
-                  sources; to reduce the use of non-renewable resources
-                </p>
-              ) : null}
+              <p
+                className={classNames(styles.text, {
+                  [styles.visible]: isOpen.second,
+                })}
+              >
+                Not to make an open fire in nature and to clean up litter; not
+                to pollute open water bodies; to switch to alternative energy
+                sources; to reduce the use of non-renewable resources
+              </p>
             </div>
             <div className={styles.question}>
               <div className={styles.titleWrapper}>
@@ -100,16 +106,18 @@ const Ready = () => {
                     })
                   }
                 >
-                  {isOpen.first ? <BtnClose /> : <BtnOpen />}
+                  {isOpen.third ? <BtnClose /> : <BtnOpen />}
                 </div>
               </div>
-              {isOpen.third ? (
-                <p>
-                  Not to make an open fire in nature and to clean up litter; not
-                  to pollute open water bodies; to switch to alternative energy
-                  sources; to reduce the use of non-renewable resources
-                </p>
-              ) : null}
+              <p
+                className={classNames(styles.text, {
+                  [styles.visible]: isOpen.third,
+                })}
+              >
+                Not to make an open fire in nature and to clean up litter; not
+                to pollute open water bodies; to switch to alternative energy
+                sources; to reduce the use of non-renewable resources
+              </p>
             </div>
           </div>
         </div>

@@ -34,10 +34,28 @@
     }
 }
 
+.question {
+    padding: 35px 0 10px;
+    border-bottom: 1px solid $black-br-rgba;
+    position: relative;
+}
 .titleWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.text {
+    height: 0;
+    overflow: hidden;
+    position:relative;
+    left: 3000px;
+    transition: left .5s ease-in-out;
+
+}
+.visible {
+    height: auto;
+    left: 0;
+
 }
 
 .btn {
