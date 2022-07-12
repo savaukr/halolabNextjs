@@ -55,9 +55,7 @@
     }
     > div {
         width: 100%;
-        @media (max-width: $screen-s) {
-            // width: 80%;
-        }
+       
     }
     .input {
         border: none;
@@ -86,6 +84,7 @@
         background-color: $red-light;
         border-radius: 30px;
         cursor: pointer;
+        
         @media (max-width: $screen-s) {
             font-size: 12px;
             width:100px;
