@@ -11,8 +11,8 @@ const BtnOpen = () => {
       <path
         d="M20.2007 14L20.2007 26M14 20.0165H26"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
